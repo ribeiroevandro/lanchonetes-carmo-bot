@@ -6,6 +6,20 @@ const TextCommand = Telegram.TextCommand
 const dotenv = require('dotenv').config({ path: '../.env' })
 const chatbot = new Telegram.Telegram(process.env.TELEGRAM_TOKEN)
 
+class StartController extends TelegramBaseController {
+  start(scope) {
+    let user = scope.message.from._firstName
+    let msg = `Olá, ${user} bem vindo ao Lanchonetes de Carmo/RJ`
+
+    scope.sendMessage(msg)
+  }
+
+  get routes() {
+    return {
+      'startHandler': 'start'
+    }
+  }
+}
 
 class LanchonetesController extends TelegramBaseController {
   LanchonetesAction(scope) {
@@ -22,6 +36,9 @@ class LanchonetesController extends TelegramBaseController {
 }
 
 chatbot.router
+  .when(
+    new TextCommand('/start', 'startHandler'), new StartController()
+  )
   .when(
     new TextCommand('/lanchonetes', 'lanchonetes'), new LanchonetesController()
   )
