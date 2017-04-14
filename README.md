@@ -1,6 +1,6 @@
 # LanchonetesCarmoRJ
 
-The `@LanchonetesCarmoBot` is a bot for [Telegram] [1], created in [Node.js][2] for didactic purposes.
+The `@LanchonetesCarmoBot` is a bot for [Telegram][1], created in [Node.js][2] for didactic purposes.
 
 ## To-Do
 - [ ] Document the installation process;
