@@ -1,0 +1,27 @@
+{
+  "name": "lanchonetes-carmo-bot",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "main": "app.js",
+  "keywords": [
+    "chatbot",
+    "Telegram"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ribeiroevandro/lanchonetes-carmo-bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ribeiroevandro/lanchonetes-carmo-bot/issues"
+  },
+  "homepage": "https://github.com/ribeiroevandro/lanchonetes-carmo-bot#readme",
+  "author": "Evandro Ribeiro",
+  "dependencies": {
+    "telegram-node-bot": "^4.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+}
