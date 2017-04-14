@@ -3,7 +3,9 @@
 const Telegram = require('telegram-node-bot')
 const TelegramBaseController = Telegram.TelegramBaseController
 const TextCommand = Telegram.TextCommand
-const chatbot = new Telegram.Telegram('335266548:AAFcg4PH3jKJDoIFuegVItaGtD85hjUR4ng')
+const dotenv = require('dotenv').config({ path: '../.env' })
+const chatbot = new Telegram.Telegram(process.env.TELEGRAM_TOKEN)
+
 
 class LanchonetesController extends TelegramBaseController {
   LanchonetesAction(scope) {
